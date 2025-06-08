@@ -1,14 +1,29 @@
 import { ReactNode } from 'react';
 
-// For Button component
-export interface ButtonProps {
-  buttonLabel: string;
-  buttonSize?: string;
-  buttonBackgroundColor?: 'red' | 'blue' | 'orange' | 'green';
-  action?: () => void;
+// Interface for Property data
+export interface AddressProps {
+  state: string;
+  city: string;
+  country: string;
 }
 
-// For routing in index.tsx
+export interface OffersProps {
+  bed: string;
+  shower: string;
+  occupants: string;
+}
+
+export interface PropertyProps {
+  name: string;
+  address: AddressProps;
+  rating: number;
+  category: string[];
+  price: number;
+  offers: OffersProps;
+  image: string;
+  discount?: string;
+}
+
 export interface PageRouteProps {
   pageRoute: string;
 }
